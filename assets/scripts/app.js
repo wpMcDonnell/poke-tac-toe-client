@@ -10,5 +10,7 @@ const authEvents = require('./auth/events')
 
 $(() => {
   // Selects for signup button forms to run event
-  $('#sign-up').on('click', authEvents.onSignUp)
+  $('#sign-up').on('submit', authEvents.onSignUp)
+
+  $('#sign-in').on('submit', authEvents.onSignIn)
 })
