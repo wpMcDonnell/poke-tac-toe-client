@@ -1,1 +1,30 @@
 @import '~bootstrap/scss/bootstrap';
+
+
+$alt-color: $cyan;
+$body-bg-color: $gray-200;
+$font-color: $light;
+
+body {
+  background-color: $body-bg-color;
+}
+
+.poke-board {
+  padding: 150px;
+}
+
+.box {
+  align-items: center;
+  // background-color: $secondary;
+  border: 5px solid $black;
+  // border-top: 0px;
+  // border-bottom: 0px;
+  color: $white;
+  display: flex;
+  height: 150px;
+  justify-content: center;
+}
+
+.alt-color {
+  background-color: $alt-color;
+}

@@ -1,5 +1,7 @@
 const config = require('./../config')
 
+const store = require('./../store.js')
+
 const signUp = function (data) {
   return $.ajax({
     url: config.apiUrl + '/sign-up',
@@ -16,7 +18,30 @@ const signIn = function (data) {
   })
 }
 
+const changePassword = function (data) {
+  return $.ajax({
+    url: config.apiUrl + '/change-password',
+    method: 'PATCH',
+    headers: {
+      Authorization: `Bearer ${store.user.token}`
+    },
+    data: data
+  })
+}
+
+const signOut = function () {
+  return $.ajax({
+    url: config.apiUrl + '/sign-out',
+    method: 'DELETE',
+    headers: {
+      Authorization: `Bearer ${store.user.token}`
+    }
+  })
+}
+
 module.exports = {
   signUp,
-  signIn
+  signIn,
+  changePassword,
+  signOut
 }

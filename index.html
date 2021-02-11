@@ -17,7 +17,24 @@
       <h1>POKE TAC TOE</h1>
 
       <section id="auth-section">
+
+        <form id='sign-in'>
+
+
+
+          <h3> Sign In</h3>
+            <input type='email' name='credentials[email]' placeholder='Enter Email Here' required>
+            <br>
+            <input type='password' name='credentials[password]' placeholder='Enter Password Here' required>
+            <br>
+            <button>Sign In</button>
+
+          </form>
+          <div id="user-message"></div>
+
+          <hr>
         <form id='sign-up'>
+          <h4> Sign Up</h4>
           <input type='email' name='credentials[email]' placeholder='Enter Email Here' required>
           <br>
           <input type='password' name='credentials[password]' placeholder='Enter Password Here' required>
@@ -29,28 +46,51 @@
             <div id="sign-up-success-message"></div>
         </form>
 
-        <form id='sign-in'>
-            <input type='email' name='credentials[email]' placeholder='Enter Email Here' required>
+
+          <hr>
+          <form id='change-password'>
+            <input type='password' name='passwords[old]' placeholder='Enter Old Password Here' required>
             <br>
-            <input type='password' name='credentials[password]' placeholder='Enter Password Here' required>
+            <input type='password' name='passwords[new]' placeholder='Enter New Password Here' required>
             <br>
-            <button>Sign In</button>
-            <div id="sign-in-error-message"></div>
-            <div id="sign-in-success-message"></div>
+            <button>Change Password</button>
+            <div id="password-error-message"></div>
+            <div id="password-success-message"></div>
           </form>
 
 
-
+          <button id='sign-out'>Sign Out</button>
       </section>
 
-      <section>
-        <div id="error-message"></div>
+      <section class="poke-board">
+
+
+          <div class="row">
+              <div class="col-sm-4 box border-top-0 border-left-0"></div>
+              <div class="col-sm-4 box border-top-0"></div>
+              <div class="col-sm-4 box border-top-0 border-right-0"></div>
+          </div>
+        </div>
+
+
+          <div class="row">
+            <div class="col-sm-4 box altcolor border-left-0"></div>
+            <div class="col-sm-4 box"></div>
+            <div class="col-sm-4 box border-right-0"></div>
+          </div>
+      </div>
+
+
+        <div class="row">
+          <div class="col-sm-4 box border-bottom-0 border-left-0"></div>
+          <div class="col-sm-4 box border-bottom-0"></div>
+          <div class="col-sm-4 box border-bottom-0 border-right-0"></div>
+        </div>
+      </div>
+
+
 
       </section>
-
-
-
-
 
 
     </body>
