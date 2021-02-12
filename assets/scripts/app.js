@@ -10,6 +10,7 @@ const authEvents = require('./auth/events')
 
 const gameTurnFunction = require('./game')
 
+
 $(() => {
   // Selects for signup button forms to run event
   $('#sign-up').on('submit', authEvents.onSignUp)
@@ -22,5 +23,5 @@ $(() => {
 
   $('.box').on('click', gameTurnFunction.move)
 
-
+  $('.box').on('click', gameTurnFunction.gameArray)
 })
