@@ -3,6 +3,7 @@ const store = require('./../store')
 $('#change-password').hide()
 $('#sign-out').hide()
 // $('.poke-board').hide()
+// $('#game-board-title').hide()
 
 const signUpSuccess = function (response) {
   $('#sign-up-success-message').text('Thank you for signing up')
@@ -27,6 +28,8 @@ const signInSuccess = function (response) {
   $('#change-password').show()
   $('#sign-out-message').text('')
   $('.poke-board').show()
+  $('#sign-in-title').hide()
+  $('#game-board-title').show()
 }
 
 const signInFailure = function (response) {
@@ -51,12 +54,13 @@ const signOutSuccess = function (response) {
   $('#user-message').text('sign out successful')
   $('#sign-up').trigger('reset')
   $('#sign-in').trigger('reset')
+  $('#change-password').trigger('reset')
   $('#change-password').hide()
   $('#sign-up').show()
   $('#sign-in').show()
   $('#sign-out').hide()
-
-
+  $('.poke-board').hide()
+  $('#game-board-title').hide()
 }
 
 const signOutFailure = function (response) {

@@ -14,7 +14,7 @@
 
     <body>
 
-      <h1>POKE TAC TOE</h1>
+      <h1 id='sign-in-title'>POKE-TAC-TOE</h1>
 
       <section id="auth-section">
 
@@ -62,33 +62,31 @@
           <button id='sign-out'>Sign Out</button>
       </section>
 
+      <h1 id='game-board-title'>Poke-Tac-Toe</h1>
+
       <section class="poke-board">
 
 
           <div class="row">
-              <div class="col-sm-4 box border-top-0 border-left-0"></div>
-              <div class="col-sm-4 box border-top-0"></div>
-              <div class="col-sm-4 box border-top-0 border-right-0"></div>
+              <div data-cell-index='0' class="col-sm-4 box border-top-0 border-left-0 "><img class='img' src='./images/pokeball.gif'></div>
+              <div data-cell-index='1' class="col-sm-4 box border-top-0"><img class='img' src='./images/pokeball.gif'></div>
+              <div data-cell-index='2' class="col-sm-4 box border-top-0 border-right-0"><img class='img' src='./images/pokeball.gif'></div>
           </div>
-        </div>
 
 
           <div class="row">
-            <div class="col-sm-4 box altcolor border-left-0"></div>
-            <div class="col-sm-4 box"></div>
-            <div class="col-sm-4 box border-right-0"></div>
+            <div data-cell-index='3' class="col-sm-4 box altcolor border-left-0"><img class='img' src='./images/pokeball.gif'></div>
+            <div data-cell-index='4' accesskey=""class="col-sm-4 box"><img class='img' src='./images/pokeball.gif'></div>
+            <div data-cell-index='5' class="col-sm-4 box border-right-0"><img class='img' src='./images/pokeball.gif'></div>
           </div>
-      </div>
+
 
 
         <div class="row">
-          <div class="col-sm-4 box border-bottom-0 border-left-0"></div>
-          <div class="col-sm-4 box border-bottom-0"></div>
-          <div class="col-sm-4 box border-bottom-0 border-right-0"></div>
+          <div data-cell-index='6' class="col-sm-4 box border-bottom-0 border-left-0 "><img class='img' src='./images/pokeball.gif'></div>
+          <div data-cell-index='7' class="col-sm-4 box border-bottom-0"><img class='img' src='./images/pokeball.gif'></div>
+          <div data-cell-index='8' class="col-sm-4 box border-bottom-0 border-right-0"><img class='img' src='./images/pokeball.gif'></div>
         </div>
-      </div>
-
-
 
       </section>
 
