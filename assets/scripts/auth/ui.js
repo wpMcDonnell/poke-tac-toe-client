@@ -2,6 +2,7 @@ const store = require('./../store')
 
 $('#change-password').hide()
 $('#sign-out').hide()
+
 // $('.poke-board').hide()
 // $('#game-board-title').hide()
 
@@ -10,7 +11,6 @@ const signUpSuccess = function (response) {
   $('#sign-up').trigger('reset')
   $('#sign-out-message').text('')
   $('#user-message').text('')
-
 }
 const signUpFailure = function (response) {
   $('#sign-up-error-message').text('Sign up failed, try again')
@@ -30,6 +30,7 @@ const signInSuccess = function (response) {
   $('.poke-board').show()
   $('#sign-in-title').hide()
   $('#game-board-title').show()
+  $('#music').trigger('play')
 }
 
 const signInFailure = function (response) {
