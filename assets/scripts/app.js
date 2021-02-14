@@ -8,7 +8,7 @@
 
 const authEvents = require('./auth/events')
 
-const gameTurnFunction = require('./game')
+const gameEvents = require('./games/events')
 
 
 $(() => {
@@ -21,7 +21,9 @@ $(() => {
 
   $('#sign-out').on('click', authEvents.onSignOut)
 
-  $('.box').on('click', gameTurnFunction.move)
+  $('.box').on('click', gameEvents.onPlayerTurn)
 
-  $('.box').on('click', gameTurnFunction.gameArray)
+  $('.box').on('click', gameEvents.onBoardArray)
+
+  $('#new-game').on('click', gameEvents.onGetNewGame)
 })
