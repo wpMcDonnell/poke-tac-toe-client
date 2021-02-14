@@ -1,5 +1,7 @@
 const store = require('./../store')
 
+const events = require('./events')
+
 
 const onNewGameSuccess = function (response) {
   store.game = response.game

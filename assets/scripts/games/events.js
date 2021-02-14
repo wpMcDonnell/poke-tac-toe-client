@@ -82,11 +82,13 @@ const onGetNewGame = function () {
   api.newGame()
     .then(ui.onNewGameSuccess)
     .catch(ui.onNewGameError)
+  $('.box').html(pokeball)
 }
 
 
 module.exports = {
   onPlayerTurn,
   onBoardArray,
-  onGetNewGame
+  onGetNewGame,
+
 }
