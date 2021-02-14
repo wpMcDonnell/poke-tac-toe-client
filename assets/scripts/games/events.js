@@ -63,9 +63,8 @@ const onBoardArray = function () {
 const onGetNewGame = function () {
   event.preventDefault()
   api.newGame()
-
     .then(ui.onNewGameSuccess)
-    .catch(ui.onError)
+    .catch(ui.onNewGameError)
 }
 
 
