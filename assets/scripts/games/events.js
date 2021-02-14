@@ -22,6 +22,23 @@ const onPlayerTurn = function (event) {
     console.log($(event.target).data())
     turn = 1
   }
+
+  const updates = {
+    game: {
+      cell: {
+        index: $(event.target).data('cell-index'),
+        value: $(event.target).data('value')
+      },
+      over: false
+    }
+
+  }
+
+  console.log(updates)
+
+  api.updateGame(updates)
+    .then(ui.onUpdateSuccess)
+    .catch(ui.OnUpdateError)
 }
 
 const onBoardArray = function () {
@@ -68,10 +85,8 @@ const onGetNewGame = function () {
 }
 
 
-
 module.exports = {
   onPlayerTurn,
   onBoardArray,
   onGetNewGame
-
 }

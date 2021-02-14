@@ -26,4 +26,7 @@ $(() => {
   $('.box').on('click', gameEvents.onBoardArray)
 
   $('#new-game').on('click', gameEvents.onGetNewGame)
+
+  $('.box').on('click', gameEvents.onGameUpdate)
+
 })

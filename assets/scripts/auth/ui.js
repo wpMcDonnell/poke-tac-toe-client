@@ -2,9 +2,9 @@ const store = require('./../store')
 
 $('#change-password').hide()
 $('#sign-out').hide()
-
-// $('.poke-board').hide()
-// $('#game-board-title').hide()
+$('#new-game').hide()
+$('.poke-board').hide()
+$('#game-board-title').hide()
 
 const signUpSuccess = function (response) {
   $('#sign-up-success-message').text('Thank you for signing up')
@@ -20,6 +20,7 @@ const signUpFailure = function (response) {
 const signInSuccess = function (response) {
   store.user = response.user
 
+
   $('#user-message').text('Sign in successful')
   $('#sign-up').trigger('reset')
   $('#sign-up').hide()
@@ -27,10 +28,10 @@ const signInSuccess = function (response) {
   $('#sign-out').show()
   $('#change-password').show()
   $('#sign-out-message').text('')
-  $('.poke-board').show()
   $('#sign-in-title').hide()
   $('#game-board-title').show()
-  $('#music').trigger('play')
+  // $('#music').trigger('play')
+  $('#new-game').show()
 }
 
 const signInFailure = function (response) {
@@ -62,6 +63,7 @@ const signOutSuccess = function (response) {
   $('#sign-out').hide()
   $('.poke-board').hide()
   $('#game-board-title').hide()
+  $('#new-game').hide()
 }
 
 const signOutFailure = function (response) {

@@ -15,7 +15,19 @@ const newGame = function () {
   })
 }
 
+const updateGame = function (updates) {
+  return $.ajax({
+    url: config.apiUrl + '/games/' + `${store.game._id}`,
+    method: 'PATCH',
+    headers: {
+      Authorization: `Bearer ${store.user.token}`
+    },
+    data: updates
+  })
+}
+
 module.exports = {
-  newGame
+  newGame,
+  updateGame
 
 }

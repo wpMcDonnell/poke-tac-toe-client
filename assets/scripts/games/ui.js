@@ -2,16 +2,29 @@ const store = require('./../store')
 
 
 const onNewGameSuccess = function (response) {
-  console.log(response)
+  store.game = response.game
+
+  $('.poke-board').show()
+  console.log(response.game)
 }
 
 const onNewGameError = function () {
   console.log('it didnt work')
+}
 
+const onUpdateSuccess = function (response) {
+  console.log(response)
+}
+
+const onUpdateError = function () {
+  console.log(' updateerror, it did not work ')
 }
 
   module.exports = {
     onNewGameSuccess,
-    onNewGameError
+    onNewGameError,
+    onUpdateSuccess,
+    onUpdateError
+
 
   }
