@@ -19,36 +19,42 @@
       <section id="auth-section">
 
         <form id='sign-in'>
-
-
-
           <h3 id='sign-in-header'> SIGN IN</h3>
             <br>
             <input type='email' name='credentials[email]' placeholder='Enter Email Here' required>
             <br>
             <input type='password' name='credentials[password]' placeholder='Enter Password Here' required>
             <br>
-            <button>Sign in</button>
+            <button>Sign In</button>
+        </form>
 
-          </form>
-          <div id="user-message"></div>
+        <div id="user-message"></div>
 
-          <hr>
+        <p id='sign-up-prompt'> Don't have an account? Create one here...</p>
+
+        <div id='create-account'>
+          <button>Create Account</button>
+        </div>
+
         <form id='sign-up'>
-          <h4> Sign Up</h4>
+          <h3 id='sign-up-header'> SIGN UP</h3>
+          <br>
           <input type='email' name='credentials[email]' placeholder='Enter Email Here' required>
           <br>
           <input type='password' name='credentials[password]' placeholder='Enter Password Here' required>
           <br>
           <input type='password' name='credentials[password_confirmation]' placeholder='Enter Password Again' required>
           <br>
-          <button>Sign Up</button>
-            <div id="sign-up-error-message"></div>
-            <div id="sign-up-success-message"></div>
+          <div>
+          <button> Sign Up </button> <button id='exit-sign-up'>Back</button>
+          </div>
         </form>
 
+        <div id="sign-up-error-message"></div>
+        <div id="sign-up-success-message"></div>
 
-          <hr>
+
+
           <form id='change-password'>
             <input type='password' name='passwords[old]' placeholder='Enter Old Password Here' required>
             <br>
@@ -114,7 +120,7 @@
         <source src='./sound/pkmusic.ogg' type='audio/ogg'/>
       </audio>
 
-      <audio id='intro-music' preload="auto" loop>
+      <audio id='intro-music'  loop>
         <source src='./sound/poke-intro.mp3' type='audio/mp3'/>
       </audio>
 

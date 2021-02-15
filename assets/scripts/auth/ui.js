@@ -1,5 +1,6 @@
 const store = require('./../store')
 
+$('#sign-up').hide()
 $('#change-password').hide()
 $('#sign-out').hide()
 $('#new-game').hide()
@@ -12,7 +13,10 @@ const signUpSuccess = function (response) {
   $('#sign-up').trigger('reset')
   $('#sign-out-message').text('')
   $('#user-message').text('')
-  $('#intro-music').trigger('pause')
+  $('#sign-in').show()
+  $('#sign-up').hide()
+  $('#sign-up-prompt').show()
+  $('#create-account').show()
 }
 const signUpFailure = function (response) {
   $('#sign-up-error-message').text('Sign up failed, try again')
@@ -36,6 +40,7 @@ const signInSuccess = function (response) {
   $('#new-game').show()
   $('#get-all-games').show()
   $('#intro-music').trigger('pause')
+
 }
 
 const signInFailure = function (response) {
@@ -72,12 +77,28 @@ const signOutSuccess = function (response) {
   $('.games-display').html('')
   $('#get-all-games').hide()
   $('#sign-in-title').show()
-  $('#intro-music').trigger('play')
   $('#music').trigger('pause')
+  $('#intro-music').prop('currentTime', 0)
+  $('#intro-music').trigger('play')
+
 }
 
 const signOutFailure = function (response) {
   $('#sign-out-message').text('Sign out failed, try again')
+}
+
+const onCreateAccount = function () {
+  $('#sign-in').hide()
+  $('#sign-up').show()
+  $('#sign-up-prompt').hide()
+  $('#create-account').hide()
+}
+
+const onExitSignUp = function () {
+  $('#sign-in').show()
+  $('#sign-up').hide()
+  $('#sign-up-prompt').show()
+  $('#create-account').show()
 }
 
 module.exports = {
@@ -88,5 +109,7 @@ module.exports = {
   changePasswordSuccess,
   changePasswordFailure,
   signOutSuccess,
-  signOutFailure
+  signOutFailure,
+  onCreateAccount,
+  onExitSignUp
 }

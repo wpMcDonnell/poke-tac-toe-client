@@ -10,6 +10,41 @@ $alt-color: $blue;
 $body-bg-color: $gray-200;
 $font-color: $light;
 
+#sign-up-prompt {
+  font-family: 'Press Start 2P', cursive;
+  font-style: italic;
+  font-size: 1px;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+#sign-up {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 125px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 15px;
+}
+
+#create-account {
+  display: flex;
+  justify-content: center;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1px;
+  margin-top: 10px;
+}
+
+#user-message, #sign-up-error-message, #sign-up-success-message {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1px;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+
+}
+
 #sign-in-title {
   // font-family: 'Press Start 2P', cursive;
   margin-top: 75px;
@@ -22,12 +57,12 @@ $font-color: $light;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 150px;
+  padding-top: 160px;
   font-family: 'Press Start 2P', cursive;
-  font-size: 10px;
+  font-size: 12px;
 }
 
-#sign-in-header {
+#sign-in-header, #sign-up-header {
   font-size: 20px;
 }
 
