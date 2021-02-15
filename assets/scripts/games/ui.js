@@ -1,11 +1,11 @@
 const store = require('./../store')
 
-const events = require('./events')
-
+// $('#player-message').hide()
 
 const onNewGameSuccess = function (response) {
   store.game = response.game
-
+  // $('#player-message').show()
+  $('#player-message').html('Payer One, make your move!')
   $('.poke-board').show()
   console.log(response.game)
 }

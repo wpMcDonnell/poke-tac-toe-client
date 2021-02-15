@@ -10,9 +10,9 @@ body {
 }
 
 .poke-board {
-  padding: 150px;
-
-
+  padding-right: 150px;
+  padding-left: 150px;
+  padding-top: 60px;
 }
 img {
   max-width: 100%;
@@ -45,4 +45,12 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#player-message {
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
 }
