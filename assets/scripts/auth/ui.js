@@ -5,12 +5,14 @@ $('#sign-out').hide()
 $('#new-game').hide()
 $('.poke-board').hide()
 $('#game-board-title').hide()
+$('#intro-music').trigger('play')
 
 const signUpSuccess = function (response) {
   $('#sign-up-success-message').text('Thank you for signing up')
   $('#sign-up').trigger('reset')
   $('#sign-out-message').text('')
   $('#user-message').text('')
+  $('#intro-music').trigger('pause')
 }
 const signUpFailure = function (response) {
   $('#sign-up-error-message').text('Sign up failed, try again')
@@ -30,12 +32,14 @@ const signInSuccess = function (response) {
   $('#sign-out-message').text('')
   $('#sign-in-title').hide()
   $('#game-board-title').show()
-  // $('#music').trigger('play')
+  $('#music').trigger('play')
   $('#new-game').show()
+  $('#get-all-games').show()
+  $('#intro-music').trigger('pause')
 }
 
 const signInFailure = function (response) {
-  $('#sign-in-message').text('Sign in failed, try again')
+  $('#user-message').text('Sign in failed, try again')
   $('#sign-out-message').text('')
 }
 
@@ -65,6 +69,11 @@ const signOutSuccess = function (response) {
   $('#game-board-title').hide()
   $('#new-game').hide()
   $('#player-message').html('')
+  $('.games-display').html('')
+  $('#get-all-games').hide()
+  $('#sign-in-title').show()
+  $('#intro-music').trigger('play')
+  $('#music').trigger('pause')
 }
 
 const signOutFailure = function (response) {

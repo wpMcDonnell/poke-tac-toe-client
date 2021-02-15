@@ -1,9 +1,35 @@
 @import '~bootstrap/scss/bootstrap';
 
 
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Mono:ital,wght@1,700&display=swap');
+
+
+
+
 $alt-color: $blue;
 $body-bg-color: $gray-200;
 $font-color: $light;
+
+#sign-in-title {
+  // font-family: 'Press Start 2P', cursive;
+  margin-top: 75px;
+  font-family: 'Press Start 2P', cursive;
+  display: flex;
+  justify-content: center;
+}
+
+#sign-in {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 150px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 10px;
+}
+
+#sign-in-header {
+  font-size: 20px;
+}
 
 body {
   background-color: $body-bg-color;
@@ -39,12 +65,15 @@ img {
 
 #game-board-title {
   text-align: center;
+  font-family: 'Press Start 2P', cursive;
+
 }
 
 #new-game {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: 'Press Start 2P', cursive;
 }
 
 #player-message {

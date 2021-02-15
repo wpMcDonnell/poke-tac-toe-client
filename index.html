@@ -22,12 +22,13 @@
 
 
 
-          <h3> Sign In</h3>
+          <h3 id='sign-in-header'> SIGN IN</h3>
+            <br>
             <input type='email' name='credentials[email]' placeholder='Enter Email Here' required>
             <br>
             <input type='password' name='credentials[password]' placeholder='Enter Password Here' required>
             <br>
-            <button>Sign In</button>
+            <button>Sign in</button>
 
           </form>
           <div id="user-message"></div>
@@ -111,6 +112,10 @@
 
       <audio id='music' preload="auto">
         <source src='./sound/pkmusic.ogg' type='audio/ogg'/>
+      </audio>
+
+      <audio id='intro-music' preload="auto" loop>
+        <source src='./sound/poke-intro.mp3' type='audio/mp3'/>
       </audio>
 
     </body>

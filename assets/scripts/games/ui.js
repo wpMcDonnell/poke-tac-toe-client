@@ -1,10 +1,13 @@
 const store = require('./../store')
 
+$('#get-all-games').hide()
+
 const onNewGameSuccess = function (response) {
   store.game = response.game
   // $('#player-message').show()
   $('#player-message').html('Payer One, make your move!')
   $('.poke-board').show()
+  $('#user-message').html('')
   console.log(response.game)
 }
 
@@ -34,6 +37,7 @@ const onIndexSuccess = function (responseData) {
   $('.games-display').html(gamesHTML)
   console.log(games)
   $('#form').trigger('reset')
+  $('#user-message').html('')
 }
 
 const onIndexError = function (err) {
