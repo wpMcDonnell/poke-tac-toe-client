@@ -107,10 +107,17 @@ const onGetNewGame = function () {
   turn = 1
 }
 
+const onIndexAllGames = function () {
+  event.preventDefault()
+  api.index()
+    .then(ui.onIndexSuccess)
+    .catch(ui.onIndexError)
+}
 
 module.exports = {
   onPlayerTurn,
   onBoardArray,
   onGetNewGame,
+  onIndexAllGames
 
 }

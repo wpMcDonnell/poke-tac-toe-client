@@ -29,4 +29,5 @@ $(() => {
 
   $('.box').on('click', gameEvents.onGameUpdate)
 
+  $('#get-all-games').on('click', gameEvents.onIndexAllGames)
 })

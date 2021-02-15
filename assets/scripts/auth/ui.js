@@ -64,6 +64,7 @@ const signOutSuccess = function (response) {
   $('.poke-board').hide()
   $('#game-board-title').hide()
   $('#new-game').hide()
+  $('#player-message').html('')
 }
 
 const signOutFailure = function (response) {

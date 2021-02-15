@@ -1,7 +1,5 @@
 const store = require('./../store')
 
-// $('#player-message').hide()
-
 const onNewGameSuccess = function (response) {
   store.game = response.game
   // $('#player-message').show()
@@ -22,11 +20,32 @@ const onUpdateError = function () {
   console.log(' updateerror, it did not work ')
 }
 
-  module.exports = {
-    onNewGameSuccess,
-    onNewGameError,
-    onUpdateSuccess,
-    onUpdateError
+const onIndexSuccess = function (responseData) {
+  const games = responseData.games
+  let gamesHTML = ''
 
+  games.forEach(game => {
+    gamesHTML += `
+  <h4>Board: ${game.cells}</h4>
+      <p>date: ${game.createdAt}</p>
+      <p>ID: ${game._id}</p>
+  `
+})
+  $('.games-display').html(gamesHTML)
+  console.log(games)
+  $('#form').trigger('reset')
+}
 
-  }
+const onIndexError = function (err) {
+  console.log(err)
+}
+
+module.exports = {
+  onNewGameSuccess,
+  onNewGameError,
+  onUpdateSuccess,
+  onUpdateError,
+  onIndexSuccess,
+  onIndexError
+
+}
