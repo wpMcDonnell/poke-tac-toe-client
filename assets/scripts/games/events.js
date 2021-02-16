@@ -57,6 +57,9 @@ const onBoardArray = function () {
   } else if ($('*[data-cell-index="2"]').data('value') === 'O' && $('*[data-cell-index="4"]').data('value') === 'O' && $('*[data-cell-index="6"]').data('value') === 'O') {
     $('#player-message').html('Player Two wins! Click new game to continue...!')
     turn = 3
+  } else if (($('*[data-cell-index="0"]').data('value') === 'O' || $('*[data-cell-index="0"]').data('value') === 'X') && ($('*[data-cell-index="1"]').data('value') === 'O' || $('*[data-cell-index="1"]').data('value') === 'X') && ($('*[data-cell-index="2"]').data('value') === 'O' || $('*[data-cell-index="2"]').data('value') === 'X') && ($('*[data-cell-index="3"]').data('value') === 'O' || $('*[data-cell-index="3"]').data('value') === 'X') && ($('*[data-cell-index="4"]').data('value') === 'O' || $('*[data-cell-index="4"]').data('value') === 'X') && ($('*[data-cell-index="5"]').data('value') === 'O' || $('*[data-cell-index="5"]').data('value') === 'X') && ($('*[data-cell-index="6"]').data('value') === 'O' || $('*[data-cell-index="6"]').data('value') === 'X') && ($('*[data-cell-index="7"]').data('value') === 'O' || $('*[data-cell-index="7"]').data('value') === 'X') && ($('*[data-cell-index="8"]').data('value') === 'O' || $('*[data-cell-index="8"]').data('value') === 'X')) {
+    $('#player-message').html('Tie! Click new game to continue!')
+    turn = 3
   }
 }
 
@@ -119,5 +122,4 @@ module.exports = {
   onBoardArray,
   onGetNewGame,
   onIndexAllGames
-
 }

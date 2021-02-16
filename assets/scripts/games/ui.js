@@ -51,7 +51,6 @@ const onIndexError = function (err) {
 }
 
 const onExitGameRecord = function () {
-  console.log('suppose to exit?')
   $('#game-board-title').show()
   $('#new-game').show()
   $('#player-message').show()
