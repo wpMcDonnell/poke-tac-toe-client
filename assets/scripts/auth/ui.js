@@ -1,5 +1,7 @@
 const store = require('./../store')
 
+
+
 $('#sign-up').hide()
 $('#change-password').hide()
 // $('#sign-out').hide()
@@ -98,7 +100,6 @@ const signOutSuccess = function (response) {
   $('#exit-game-record').hide()
   $('#password-error-message').html('')
   $('#password-success-message').html('')
-
 }
 
 const signOutFailure = function (response) {
@@ -149,21 +150,7 @@ const onAccountSettings = function () {
   $('#exit-game-record').hide()
 }
 
-const onExitAccountSettings = function () {
-  $('#game-board-title').show()
-  $('#new-game').show()
-  $('#player-message').show()
-  $('.poke-board').show()
-  $('#exit-game-record').hide()
-  $('.games-display').html('')
-  $('#player-message').show()
-  $('#change-password').hide()
-  // $('#exit-account-settings').hide()
-  $('#get-all-games').show()
-  $('#account-settings').show()
-  $('#password-error-message').html('')
-  $('#password-success-message').html('')
-}
+
 
 module.exports = {
   signUpSuccess,
@@ -177,6 +164,6 @@ module.exports = {
   onCreateAccount,
   onExitSignUp,
   onStartButton,
-  onAccountSettings,
-  onExitAccountSettings
+  onAccountSettings
+
 }

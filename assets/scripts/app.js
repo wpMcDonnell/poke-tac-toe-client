@@ -45,5 +45,5 @@ $(() => {
 
   $('#account-settings').on('click', authUi.onAccountSettings)
 
-  $('#exit-account-settings').on('click', authUi.onExitAccountSettings)
+  $('#exit-account-settings').on('click', gameUi.onExitAccountSettings)
 })
