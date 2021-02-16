@@ -6,7 +6,10 @@ $('#sign-out').hide()
 $('#new-game').hide()
 $('.poke-board').hide()
 $('#game-board-title').hide()
-$('#intro-music').trigger('play')
+$('#sign-in').hide()
+$('#create-account').hide()
+$('#sign-up-prompt').hide()
+
 
 const signUpSuccess = function (response) {
   $('#sign-up-success-message').text('Thank you for signing up')
@@ -40,6 +43,8 @@ const signInSuccess = function (response) {
   $('#new-game').show()
   $('#get-all-games').show()
   $('#intro-music').trigger('pause')
+  $('#sign-up-prompt').hide()
+  $('#create-account').hide()
 
 }
 
@@ -80,6 +85,9 @@ const signOutSuccess = function (response) {
   $('#music').trigger('pause')
   $('#intro-music').prop('currentTime', 0)
   $('#intro-music').trigger('play')
+  $('#sign-up').hide()
+  $('#sign-up-prompt').show()
+  $('#create-account').show()
 
 }
 
@@ -92,6 +100,7 @@ const onCreateAccount = function () {
   $('#sign-up').show()
   $('#sign-up-prompt').hide()
   $('#create-account').hide()
+  $('#user-message').html('')
 }
 
 const onExitSignUp = function () {
@@ -99,6 +108,16 @@ const onExitSignUp = function () {
   $('#sign-up').hide()
   $('#sign-up-prompt').show()
   $('#create-account').show()
+  $('#user-message').html('')
+}
+
+const onStartButton = function () {
+  $('#sign-in').show()
+  $('#sign-up-prompt').show()
+  $('#create-account').show()
+  $('#start-button').hide()
+  $('#start-screen-message').hide()
+  $('#intro-music').trigger('play')
 }
 
 module.exports = {
@@ -111,5 +130,6 @@ module.exports = {
   signOutSuccess,
   signOutFailure,
   onCreateAccount,
-  onExitSignUp
+  onExitSignUp,
+  onStartButton
 }

@@ -10,6 +10,27 @@ $alt-color: $blue;
 $body-bg-color: $gray-200;
 $font-color: $light;
 
+
+#start-button {
+  font-family: 'Press Start 2P', cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+
+
+}
+
+ #start-screen-message {
+   font-family: 'Press Start 2P', cursive;
+   font-style: italic;
+   display: flex;
+   justify-content: center;
+   margin-top: 15%;
+
+
+}
+
 #sign-up-prompt {
   font-family: 'Press Start 2P', cursive;
   font-style: italic;
@@ -17,6 +38,7 @@ $font-color: $light;
   margin-top: 40px;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 #sign-up {

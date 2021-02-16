@@ -36,4 +36,6 @@ $(() => {
   $('#create-account').on('click', ui.onCreateAccount)
 
   $('#exit-sign-up').on('click', ui.onExitSignUp)
+
+  $('#start-button').on('click', ui.onStartButton)
 })
