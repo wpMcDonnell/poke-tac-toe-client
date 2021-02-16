@@ -25,6 +25,11 @@ $font-color: $light;
   margin-left: 15px;
   margin-right: 15px;
 
+  #sign-out-button {
+    display: flex;
+    justify-content: flex-end;
+  }
+
 }
 #start-button {
   font-family: 'Press Start 2P', cursive;
@@ -100,7 +105,7 @@ $font-color: $light;
   font-size: 12px;
 }
 
-#sign-in-header, #sign-up-header {
+#sign-in-header, #sign-up-header, #change-password-header {
   font-size: 20px;
 }
 
@@ -142,7 +147,7 @@ img {
 
 }
 
-#new-game, #get-all-games, #exit-game-record {
+#new-game, #get-all-games, #exit-game-record, #exit-account-settings {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -164,5 +169,14 @@ img {
     font-family: 'Press Start 2P', cursive;
     font-size: 1px;
     margin-left: 1%;
+}
+
+#change-password {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 125px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 15px;
 
 }

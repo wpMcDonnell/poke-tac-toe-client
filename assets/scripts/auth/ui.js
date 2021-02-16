@@ -42,6 +42,7 @@ const signInSuccess = function (response) {
   $('#sign-out-message').text('')
   $('#sign-in-title').hide()
   $('#game-board-title').show()
+  $('#music').prop('currentTime', 0)
   $('#music').trigger('play')
   $('#new-game').show()
   $('#get-all-games').show()
@@ -49,6 +50,7 @@ const signInSuccess = function (response) {
   $('#sign-up-prompt').hide()
   $('#create-account').hide()
   $('.options-row').show()
+  $('#account-settings').show()
 
 }
 
@@ -94,6 +96,8 @@ const signOutSuccess = function (response) {
   $('#create-account').show()
   $('.options-row').hide()
   $('#exit-game-record').hide()
+  $('#password-error-message').html('')
+  $('#password-success-message').html('')
 
 }
 
@@ -132,6 +136,35 @@ const onStartButton = function () {
   $('#intro-music').trigger('play')
 }
 
+const onAccountSettings = function () {
+  $('#user-message').html('')
+  $('#game-board-title').hide()
+  $('#new-game').hide()
+  $('#player-message').hide()
+  $('.poke-board').hide()
+  $('#get-all-games').hide()
+  $('#change-password').show()
+  $('#account-settings').hide()
+  $('.game-display').hide()
+  $('#exit-game-record').hide()
+}
+
+const onExitAccountSettings = function () {
+  $('#game-board-title').show()
+  $('#new-game').show()
+  $('#player-message').show()
+  $('.poke-board').show()
+  $('#exit-game-record').hide()
+  $('.games-display').html('')
+  $('#player-message').show()
+  $('#change-password').hide()
+  // $('#exit-account-settings').hide()
+  $('#get-all-games').show()
+  $('#account-settings').show()
+  $('#password-error-message').html('')
+  $('#password-success-message').html('')
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -143,5 +176,7 @@ module.exports = {
   signOutFailure,
   onCreateAccount,
   onExitSignUp,
-  onStartButton
+  onStartButton,
+  onAccountSettings,
+  onExitAccountSettings
 }

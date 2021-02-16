@@ -10,7 +10,7 @@ const authEvents = require('./auth/events')
 
 const gameEvents = require('./games/events')
 
-const ui = require('./auth/ui')
+const authUi = require('./auth/ui')
 
 const gameUi = require('./games/ui')
 
@@ -35,12 +35,16 @@ $(() => {
 
   $('#get-all-games').on('click', gameEvents.onIndexAllGames)
 
-  $('#create-account').on('click', ui.onCreateAccount)
+  $('#create-account').on('click', authUi.onCreateAccount)
 
-  $('#exit-sign-up').on('click', ui.onExitSignUp)
+  $('#exit-sign-up').on('click', authUi.onExitSignUp)
 
-  $('#start-button').on('click', ui.onStartButton)
+  $('#start-button').on('click', authUi.onStartButton)
 
   $('#exit-game-record').on('click', gameUi.onExitGameRecord)
+
+  $('#account-settings').on('click', authUi.onAccountSettings)
+
+  $('#exit-account-settings').on('click', authUi.onExitAccountSettings)
 
 })
