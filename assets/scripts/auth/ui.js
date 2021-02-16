@@ -21,10 +21,12 @@ const signUpSuccess = function (response) {
   $('#sign-up').hide()
   $('#sign-up-prompt').show()
   $('#create-account').show()
+  $('#sign-up-error-message').html('')
 }
 const signUpFailure = function (response) {
   $('#sign-up-error-message').text('Sign up failed, try again')
   $('#sign-out-message').text('')
+  $('#sign-up').trigger('reset')
 }
 
 const signInSuccess = function (response) {
@@ -106,6 +108,7 @@ const onCreateAccount = function () {
   $('#create-account').hide()
   $('#user-message').html('')
   $('#sign-in').trigger('reset')
+  $('#sign-up-success-message').html('')
 }
 
 const onExitSignUp = function () {
@@ -116,6 +119,7 @@ const onExitSignUp = function () {
   $('#user-message').html('')
   $('#sign-in').trigger('reset')
   $('#sign-up').trigger('reset')
+  $('#sign-up-error-message').html('')
 
 }
 

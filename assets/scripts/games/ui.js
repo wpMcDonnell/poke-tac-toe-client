@@ -59,6 +59,7 @@ const onExitGameRecord = function () {
   $('#exit-game-record').hide()
   $('.games-display').html('')
   $('#player-message').show()
+
 }
 
 module.exports = {
