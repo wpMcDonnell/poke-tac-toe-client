@@ -3,6 +3,11 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Mono:ital,wght@1,700&display=swap');
 
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
 
 
 
@@ -11,6 +16,16 @@ $body-bg-color: $gray-200;
 $font-color: $light;
 
 
+.options-row {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Press Start 2P', cursive;
+  margin-bottom: 20px;
+  font-size: 2px;
+  margin-left: 15px;
+  margin-right: 15px;
+
+}
 #start-button {
   font-family: 'Press Start 2P', cursive;
   display: flex;
@@ -27,6 +42,7 @@ $font-color: $light;
    display: flex;
    justify-content: center;
    margin-top: 15%;
+   animation: blinker 2s linear infinite;
 
 
 }
@@ -126,17 +142,20 @@ img {
 
 }
 
-#new-game {
+#new-game, #get-all-games {
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: 'Press Start 2P', cursive;
+  margin-top: 2px;
 }
 
 #player-message {
-  font-size: 30px;
+  font-family: 'Press Start 2P', cursive;
   display: flex;
   justify-content: center;
   align-items: center;
   padding-top: 30px;
+  font-size: 15px;
+  font-style: italic;
 }

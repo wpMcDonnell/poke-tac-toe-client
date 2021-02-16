@@ -2,13 +2,14 @@ const store = require('./../store')
 
 $('#sign-up').hide()
 $('#change-password').hide()
-$('#sign-out').hide()
+// $('#sign-out').hide()
 $('#new-game').hide()
 $('.poke-board').hide()
 $('#game-board-title').hide()
 $('#sign-in').hide()
 $('#create-account').hide()
 $('#sign-up-prompt').hide()
+$('.options-row').hide()
 
 
 const signUpSuccess = function (response) {
@@ -34,8 +35,8 @@ const signInSuccess = function (response) {
   $('#sign-up').trigger('reset')
   $('#sign-up').hide()
   $('#sign-in').hide()
-  $('#sign-out').show()
-  $('#change-password').show()
+  // $('#sign-out').show()
+  // $('#change-password').show()
   $('#sign-out-message').text('')
   $('#sign-in-title').hide()
   $('#game-board-title').show()
@@ -45,6 +46,7 @@ const signInSuccess = function (response) {
   $('#intro-music').trigger('pause')
   $('#sign-up-prompt').hide()
   $('#create-account').hide()
+  $('.options-row').show()
 
 }
 
