@@ -1,6 +1,7 @@
 const store = require('./../store')
 
 $('#get-all-games').hide()
+$('#exit-game-record').hide()
 
 const onNewGameSuccess = function (response) {
   store.game = response.game
@@ -38,10 +39,26 @@ const onIndexSuccess = function (responseData) {
   console.log(games)
   $('#form').trigger('reset')
   $('#user-message').html('')
+  $('#game-board-title').hide()
+  $('#new-game').hide()
+  $('#player-message').hide()
+  $('.poke-board').hide()
+  $('#exit-game-record').show()
 }
 
 const onIndexError = function (err) {
   console.log(err)
+}
+
+const onExitGameRecord = function () {
+  console.log('suppose to exit?')
+  $('#game-board-title').show()
+  $('#new-game').show()
+  $('#player-message').show()
+  $('.poke-board').show()
+  $('#exit-game-record').hide()
+  $('.games-display').html('')
+  $('#player-message').show()
 }
 
 module.exports = {
@@ -50,6 +67,7 @@ module.exports = {
   onUpdateSuccess,
   onUpdateError,
   onIndexSuccess,
-  onIndexError
+  onIndexError,
+  onExitGameRecord
 
 }

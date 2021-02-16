@@ -142,7 +142,7 @@ img {
 
 }
 
-#new-game, #get-all-games {
+#new-game, #get-all-games, #exit-game-record {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -158,4 +158,10 @@ img {
   padding-top: 30px;
   font-size: 15px;
   font-style: italic;
+}
+
+.games-display {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1px;
+
 }

@@ -12,6 +12,8 @@ const gameEvents = require('./games/events')
 
 const ui = require('./auth/ui')
 
+const gameUi = require('./games/ui')
+
 
 $(() => {
   // Selects for signup button forms to run event
@@ -38,4 +40,7 @@ $(() => {
   $('#exit-sign-up').on('click', ui.onExitSignUp)
 
   $('#start-button').on('click', ui.onStartButton)
+
+  $('#exit-game-record').on('click', gameUi.onExitGameRecord)
+
 })

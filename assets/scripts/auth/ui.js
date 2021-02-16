@@ -76,7 +76,7 @@ const signOutSuccess = function (response) {
   $('#change-password').hide()
   $('#sign-up').show()
   $('#sign-in').show()
-  $('#sign-out').hide()
+  // $('#sign-out').hide()
   $('.poke-board').hide()
   $('#game-board-title').hide()
   $('#new-game').hide()
@@ -90,6 +90,8 @@ const signOutSuccess = function (response) {
   $('#sign-up').hide()
   $('#sign-up-prompt').show()
   $('#create-account').show()
+  $('.options-row').hide()
+  $('#exit-game-record').hide()
 
 }
 
@@ -103,6 +105,7 @@ const onCreateAccount = function () {
   $('#sign-up-prompt').hide()
   $('#create-account').hide()
   $('#user-message').html('')
+  $('#sign-in').trigger('reset')
 }
 
 const onExitSignUp = function () {
@@ -111,6 +114,9 @@ const onExitSignUp = function () {
   $('#sign-up-prompt').show()
   $('#create-account').show()
   $('#user-message').html('')
+  $('#sign-in').trigger('reset')
+  $('#sign-up').trigger('reset')
+
 }
 
 const onStartButton = function () {
