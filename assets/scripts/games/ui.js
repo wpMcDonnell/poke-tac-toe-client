@@ -85,6 +85,7 @@ const onExitAccountSettings = function () {
   $('.games-display').hide()
   $('#animation-growlith').hide()
   $('#user-message').html('')
+  $('#change-password').trigger('reset')
 }
 
 module.exports = {

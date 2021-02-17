@@ -90,7 +90,6 @@ const onPlayerTurn = function (event) {
 
   }
 
-  console.log(updates)
 
   api.updateGame(updates)
     .then(ui.onUpdateSuccess)

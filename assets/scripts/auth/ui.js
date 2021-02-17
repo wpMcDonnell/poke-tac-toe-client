@@ -54,6 +54,7 @@ const signInSuccess = function (response) {
   $('#account-settings').show()
   $('#animation-evee').hide()
   $('#sign-up-success-message').html('')
+  $('#change-password').trigger('reset')
 }
 
 const signInFailure = function (response) {
