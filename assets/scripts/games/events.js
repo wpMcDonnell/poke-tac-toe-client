@@ -70,14 +70,12 @@ const onPlayerTurn = function (event) {
     $(event.target).html('')
     $(event.target).html(hitmonlee)
     $(event.target).data('value', 'X')
-    console.log($(event.target).data())
     turn = 2
   } else if ((turn === 2) && ($(event.target).html() === pokeball)) {
     $('#player-message').html('Player One, your turn!')
     $(event.target).html('')
     $(event.target).html(hitmonchan)
     $(event.target).data('value', 'O')
-    console.log($(event.target).data())
     turn = 1
   }
 
