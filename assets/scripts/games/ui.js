@@ -47,6 +47,7 @@ const onIndexSuccess = function (responseData) {
   $('.poke-board').hide()
   $('#exit-game-record').show()
   $('.games-display').show()
+  $('#get-all-games').hide()
 }
 
 const onIndexError = function (err) {
@@ -63,6 +64,7 @@ const onExitGameRecord = function () {
   if ($('#new-game').data('clicked') === 'yes') {
     $('.poke-board').show()
   }
+  $('#get-all-games').show()
 }
 
 const onExitAccountSettings = function () {
