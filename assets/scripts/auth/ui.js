@@ -23,6 +23,8 @@ const signUpSuccess = function (response) {
   $('#sign-up-prompt').show()
   $('#create-account').show()
   $('#sign-up-error-message').html('')
+  $('#animation-chansey').hide()
+  $('#animation-evee').show()
 
 }
 const signUpFailure = function (response) {
@@ -52,6 +54,7 @@ const signInSuccess = function (response) {
   $('.options-row').show()
   $('#account-settings').show()
   $('#animation-evee').hide()
+  $('#sign-up-success-message').html('')
 }
 
 const signInFailure = function (response) {
@@ -64,6 +67,7 @@ const changePasswordSuccess = function () {
   $('#change-password').trigger('reset')
   $('#sign-in-message').text('')
   $('#user-message').text('')
+  $('#password-error-message').text('')
 }
 
 const changePasswordFailure = function () {
@@ -101,6 +105,7 @@ const signOutSuccess = function (response) {
   $('#password-success-message').html('')
   $('#new-game').data('clicked', 'no')
   $('#animation-evee').show()
+  $('#animation-growlith').hide()
 }
 
 const signOutFailure = function (response) {
@@ -156,6 +161,7 @@ const onAccountSettings = function () {
   $('#exit-game-record').hide()
   $('.games-display').hide()
   $('#animation-growlith').show()
+  $('#')
 }
 
 
