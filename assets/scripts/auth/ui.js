@@ -1,6 +1,6 @@
+// import { newGameVar } from '../games/ui'
+
 const store = require('./../store')
-
-
 
 $('#sign-up').hide()
 $('#change-password').hide()
@@ -24,6 +24,8 @@ const signUpSuccess = function (response) {
   $('#sign-up-prompt').show()
   $('#create-account').show()
   $('#sign-up-error-message').html('')
+  // let newGameVar = 'something else'
+
 }
 const signUpFailure = function (response) {
   $('#sign-up-error-message').text('Sign up failed, try again')
@@ -53,6 +55,7 @@ const signInSuccess = function (response) {
   $('#create-account').hide()
   $('.options-row').show()
   $('#account-settings').show()
+
 
 }
 
@@ -100,6 +103,7 @@ const signOutSuccess = function (response) {
   $('#exit-game-record').hide()
   $('#password-error-message').html('')
   $('#password-success-message').html('')
+  $('#new-game').data('clicked', 'no')
 }
 
 const signOutFailure = function (response) {

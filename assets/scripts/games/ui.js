@@ -1,9 +1,11 @@
 const store = require('./../store')
 
+
+
 $('#get-all-games').hide()
 $('#exit-game-record').hide()
 
-let newGameVar = ''
+// let newGameVar = ''
 
 const onNewGameSuccess = function (response) {
   store.game = response.game
@@ -11,8 +13,7 @@ const onNewGameSuccess = function (response) {
   $('#player-message').html('Payer One, make your move!')
   $('.poke-board').show()
   $('#user-message').html('')
-  newGameVar = 'yes'
-  console.log(newGameVar)
+  $('#new-game').data('clicked', 'yes')
   console.log(response.game)
 }
 
@@ -58,10 +59,12 @@ const onExitGameRecord = function () {
   $('#game-board-title').show()
   $('#new-game').show()
   $('#player-message').show()
-  $('.poke-board').show()
   $('#exit-game-record').hide()
   $('.games-display').html('')
   $('#player-message').show()
+  if ($('#new-game').data('clicked') === 'yes') {
+    $('.poke-board').show()
+}
 }
 
 const onExitAccountSettings = function () {
@@ -77,7 +80,7 @@ const onExitAccountSettings = function () {
   $('#account-settings').show()
   $('#password-error-message').html('')
   $('#password-success-message').html('')
-  if (newGameVar === 'yes') {
+  if ($('#new-game').data('clicked') === 'yes') {
     $('.poke-board').show()
   }
 }
@@ -91,6 +94,6 @@ module.exports = {
   onIndexError,
   onExitGameRecord,
   onExitAccountSettings,
-  newGameVar
+
 
 }
