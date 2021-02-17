@@ -1,4 +1,3 @@
-// import { newGameVar } from '../games/ui'
 
 const store = require('./../store')
 
@@ -161,7 +160,6 @@ const onAccountSettings = function () {
   $('#exit-game-record').hide()
   $('.games-display').hide()
   $('#animation-growlith').show()
-  $('#')
 }
 
 

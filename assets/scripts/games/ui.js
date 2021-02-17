@@ -13,19 +13,18 @@ const onNewGameSuccess = function (response) {
   $('.poke-board').show()
   $('#user-message').html('')
   $('#new-game').data('clicked', 'yes')
-  console.log(response.game)
 }
 
 const onNewGameError = function () {
-  console.log('it didnt work')
+  $('#player-message').html('Error. Board did not load..')
 }
 
 const onUpdateSuccess = function (response) {
-  console.log(response)
+  // console.log(response)
 }
 
 const onUpdateError = function () {
-  // console.log(' updateerror, it did not work ')
+  $('#user-message').html('Game Over, please click New Game to continue..')
 }
 
 const onIndexSuccess = function (responseData) {
@@ -51,7 +50,7 @@ const onIndexSuccess = function (responseData) {
 }
 
 const onIndexError = function (err) {
-  console.log(err)
+  $('.games-display').html(err)
 }
 
 const onExitGameRecord = function () {
@@ -63,7 +62,7 @@ const onExitGameRecord = function () {
   $('#player-message').show()
   if ($('#new-game').data('clicked') === 'yes') {
     $('.poke-board').show()
-}
+  }
 }
 
 const onExitAccountSettings = function () {
@@ -83,6 +82,7 @@ const onExitAccountSettings = function () {
   }
   $('.games-display').hide()
   $('#animation-growlith').hide()
+  $('#user-message').html('')
 }
 
 module.exports = {
