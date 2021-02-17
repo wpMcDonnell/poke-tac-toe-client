@@ -45,10 +45,11 @@ const onIndexSuccess = function (responseData) {
   $('#player-message').hide()
   $('.poke-board').hide()
   $('#exit-game-record').show()
+  $('.games-display').show()
 }
 
 const onIndexError = function (err) {
-  $('#user-message').html(err)
+  console.log(err)
 }
 
 const onExitGameRecord = function () {

@@ -4,7 +4,6 @@ const store = require('./../store')
 
 $('#sign-up').hide()
 $('#change-password').hide()
-// $('#sign-out').hide()
 $('#new-game').hide()
 $('.poke-board').hide()
 $('#game-board-title').hide()
@@ -24,7 +23,6 @@ const signUpSuccess = function (response) {
   $('#sign-up-prompt').show()
   $('#create-account').show()
   $('#sign-up-error-message').html('')
-  // let newGameVar = 'something else'
 
 }
 const signUpFailure = function (response) {
@@ -41,8 +39,6 @@ const signInSuccess = function (response) {
   $('#sign-up').trigger('reset')
   $('#sign-up').hide()
   $('#sign-in').hide()
-  // $('#sign-out').show()
-  // $('#change-password').show()
   $('#sign-out-message').text('')
   $('#sign-in-title').hide()
   $('#game-board-title').show()
@@ -55,8 +51,6 @@ const signInSuccess = function (response) {
   $('#create-account').hide()
   $('.options-row').show()
   $('#account-settings').show()
-
-
 }
 
 const signInFailure = function (response) {
@@ -85,7 +79,6 @@ const signOutSuccess = function (response) {
   $('#change-password').hide()
   $('#sign-up').show()
   $('#sign-in').show()
-  // $('#sign-out').hide()
   $('.poke-board').hide()
   $('#game-board-title').hide()
   $('#new-game').hide()
