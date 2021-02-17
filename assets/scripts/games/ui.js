@@ -2,7 +2,9 @@ const store = require('./../store')
 
 $('#get-all-games').hide()
 $('#exit-game-record').hide()
-
+$('#animation-evee').hide()
+$('#animation-chansey').hide()
+$('#animation-growlith').hide()
 
 
 const onNewGameSuccess = function (response) {
@@ -23,7 +25,7 @@ const onUpdateSuccess = function (response) {
 }
 
 const onUpdateError = function () {
-  console.log(' updateerror, it did not work ')
+  // console.log(' updateerror, it did not work ')
 }
 
 const onIndexSuccess = function (responseData) {
@@ -80,6 +82,7 @@ const onExitAccountSettings = function () {
     $('.poke-board').show()
   }
   $('.games-display').hide()
+  $('#animation-growlith').hide()
 }
 
 module.exports = {

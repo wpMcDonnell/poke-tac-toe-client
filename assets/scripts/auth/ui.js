@@ -51,6 +51,7 @@ const signInSuccess = function (response) {
   $('#create-account').hide()
   $('.options-row').show()
   $('#account-settings').show()
+  $('#animation-evee').hide()
 }
 
 const signInFailure = function (response) {
@@ -67,6 +68,8 @@ const changePasswordSuccess = function () {
 
 const changePasswordFailure = function () {
   $('#password-error-message').text('Password was not changed. Try again')
+  $('#change-password').trigger('reset')
+  $('#password-success-message').text('')
 }
 
 const signOutSuccess = function (response) {
@@ -97,6 +100,7 @@ const signOutSuccess = function (response) {
   $('#password-error-message').html('')
   $('#password-success-message').html('')
   $('#new-game').data('clicked', 'no')
+  $('#animation-evee').show()
 }
 
 const signOutFailure = function (response) {
@@ -111,6 +115,8 @@ const onCreateAccount = function () {
   $('#user-message').html('')
   $('#sign-in').trigger('reset')
   $('#sign-up-success-message').html('')
+  $('#animation-evee').hide()
+  $('#animation-chansey').show()
 }
 
 const onExitSignUp = function () {
@@ -122,6 +128,8 @@ const onExitSignUp = function () {
   $('#sign-in').trigger('reset')
   $('#sign-up').trigger('reset')
   $('#sign-up-error-message').html('')
+  $('#animation-evee').show()
+  $('#animation-chansey').hide()
 
 }
 
@@ -132,6 +140,7 @@ const onStartButton = function () {
   $('#start-button').hide()
   $('#start-screen-message').hide()
   $('#intro-music').trigger('play')
+  $('#animation-evee').show()
 }
 
 const onAccountSettings = function () {
@@ -146,6 +155,7 @@ const onAccountSettings = function () {
   $('.game-display').hide()
   $('#exit-game-record').hide()
   $('.games-display').hide()
+  $('#animation-growlith').show()
 }
 
 

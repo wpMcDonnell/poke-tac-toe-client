@@ -15,6 +15,46 @@ $alt-color: $blue;
 $body-bg-color: $gray-200;
 $font-color: $light;
 
+#animation-evee {
+  // max-width: 15%;
+  // max-height: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#animation-chansey {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#animation-growlith {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#evee {
+  max-width: 15%;
+  max-height: 15%;
+  padding-bottom: 5px;
+}
+
+#chansey {
+  max-width: 17%;
+  max-height: 17%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+#growlith {
+  max-width: 13%;
+  max-height: 13%;
+  padding-bottom: 12px;
+}
+
+
 
 .options-row {
   display: flex;
@@ -70,7 +110,7 @@ $font-color: $light;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 125px;
+  // padding-top: 125px;
   font-family: 'Press Start 2P', cursive;
   font-size: 15px;
 }
@@ -93,7 +133,6 @@ $font-color: $light;
 }
 
 #sign-in-title {
-  // font-family: 'Press Start 2P', cursive;
   margin-top: 75px;
   font-family: 'Press Start 2P', cursive;
   display: flex;
@@ -104,7 +143,7 @@ $font-color: $light;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 160px;
+  // padding-top: 160px;
   font-family: 'Press Start 2P', cursive;
   font-size: 12px;
 }
@@ -179,7 +218,7 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 125px;
+  // padding-top: 125px;
   font-family: 'Press Start 2P', cursive;
   font-size: 15px;
 
