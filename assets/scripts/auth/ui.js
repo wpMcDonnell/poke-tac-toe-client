@@ -152,6 +152,7 @@ const onAccountSettings = function () {
   $('#account-settings').hide()
   $('.game-display').hide()
   $('#exit-game-record').hide()
+  $('.games-display').hide()
 }
 
 

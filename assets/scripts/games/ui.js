@@ -1,15 +1,12 @@
 const store = require('./../store')
 
-
-
 $('#get-all-games').hide()
 $('#exit-game-record').hide()
 
-// let newGameVar = ''
+
 
 const onNewGameSuccess = function (response) {
   store.game = response.game
-  // $('#player-message').show()
   $('#player-message').html('Payer One, make your move!')
   $('.poke-board').show()
   $('#user-message').html('')
@@ -41,7 +38,6 @@ const onIndexSuccess = function (responseData) {
   `
 })
   $('.games-display').html(gamesHTML)
-  console.log(games)
   $('#form').trigger('reset')
   $('#user-message').html('')
   $('#game-board-title').hide()
@@ -52,7 +48,7 @@ const onIndexSuccess = function (responseData) {
 }
 
 const onIndexError = function (err) {
-  console.log(err)
+  $('#user-message').html(err)
 }
 
 const onExitGameRecord = function () {
@@ -75,7 +71,6 @@ const onExitAccountSettings = function () {
   $('.games-display').html('')
   $('#player-message').show()
   $('#change-password').hide()
-  // $('#exit-account-settings').hide()
   $('#get-all-games').show()
   $('#account-settings').show()
   $('#password-error-message').html('')
@@ -83,6 +78,7 @@ const onExitAccountSettings = function () {
   if ($('#new-game').data('clicked') === 'yes') {
     $('.poke-board').show()
   }
+  $('.games-display').hide()
 }
 
 module.exports = {
@@ -93,7 +89,6 @@ module.exports = {
   onIndexSuccess,
   onIndexError,
   onExitGameRecord,
-  onExitAccountSettings,
-
+  onExitAccountSettings
 
 }
