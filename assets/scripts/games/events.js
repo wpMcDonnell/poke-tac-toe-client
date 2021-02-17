@@ -3,9 +3,9 @@ const api = require('./api')
 const ui = require('./ui')
 
 let turn = 1
-const hitmonlee = '<img src="../../../public/images/hitmonlee.png">'
-const hitmonchan = '<img src="../../../public/images/Hitmonchan.png">'
-const pokeball = '<img class="img" src="../../../public/images/pokeball.gif">'
+const hitmonlee = '<img src="../../../public/hitmonlee.png">'
+const hitmonchan = '<img src="../../../public/Hitmonchan.png">'
+const pokeball = '<img class="img" src="../../../public/pokeball.gif">'
 
 const onBoardArray = function () {
   if ($('*[data-cell-index="0"]').data('value') === 'X' && $('*[data-cell-index="3"]').data('value') === 'X' && $('*[data-cell-index="6"]').data('value') === 'X') {
