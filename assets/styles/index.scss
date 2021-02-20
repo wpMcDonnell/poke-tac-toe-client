@@ -31,6 +31,7 @@ body html {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 2.5rem;
 }
 
 #animation-growlith {
@@ -40,10 +41,9 @@ body html {
 }
 
 #chansey {
-  margin-top: .5rem;
   margin-bottom: 0.3rem;
-  max-width: 40%;
-  max-height: 40%;
+  max-width: 50%;
+  max-height: 50%;
 }
 
 #growlith {
@@ -54,11 +54,23 @@ body html {
 
 .options-row {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  flex-direction: row-reverse;
   align-items: center;
   font-family: 'Press Start 2P', cursive;
   margin-bottom: 0.05rem;
-  font-size: 1vw;
+  font-size: 10px;
+  margin-left: 0.05rem;
+  margin-right: 0.05rem;
+}
+
+.options-row-2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Press Start 2P', cursive;
+  margin-bottom: 0.05rem;
+  font-size: 10px;
   margin-left: 0.05rem;
   margin-right: 0.05rem;
 }
@@ -66,7 +78,7 @@ body html {
 #sign-out-button {
   display: flex;
   flex-flow: row-reverse;
-  padding-top: 0.75rem;
+  // padding-top: 0.75rem;
 }
 
 #start-button {
@@ -104,13 +116,22 @@ body html {
 }
 
 #sign-up-error-message,
-#sign-up-success-message,
 #user-message {
   font-family: 'Press Start 2P', cursive;
-  font-size: 1px;
+  font-size: 11px;
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 1rem;
+  color: goldenrod;
+}
+
+#sign-up-success-message {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 11px;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  color: green;
 }
 
 .sign-in-title {
@@ -193,14 +214,20 @@ img {
 }
 
 #exit-account-settings,
-#exit-game-record,
 #get-all-games,
 #new-game {
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: 'Press Start 2P', cursive;
-  font-size: xx-small;
+}
+
+#exit-game-record {
+  display: flex;
+  justify-content: center;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 14px;
+  margin-top: 1rem;
 }
 
 #get-all-games {
@@ -216,7 +243,7 @@ img {
   text-align: center;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  font-size: 8px;
+  font-size: 12px;
   font-style: italic;
 }
 
