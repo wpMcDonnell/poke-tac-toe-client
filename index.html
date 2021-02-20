@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+      <title>Poke-Tac-Toe</title>
+         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+
+    <body>
+
+      <div class='sign-in-title'>
+      <p id='sign-in-title'>POKE-TAC-TOE</p>
+      </div>
+
+      <div id='animation-evee'>
+        <img id='evee' src='public/evee.gif' alt='evee'>
+      </div>
+
+      <div id='animation-chansey'>
+        <img id='chansey' src='public/chansey.gif' alt='chansey'>
+      </div>
+
+      <div class='start-screen-message'>
+        <p id='start-screen-message'> Press the start button to play... </p>
+      </div>
+
+
+      <div id='start-button'>
+        <button>START</button>
+      </div>
+
+
+      <div class='options-row'>
+
+      <div id='sign-out-button-row'>
+        <div id='sign-out-button'>
+          <button id='sign-out'>Sign Out</button>
+        </div>
+      </div>
+
+      <div id='account-settings'>
+        <button>Settings</button>
+      </div>
+
+      </div>
+
+      <section id="auth-section">
+
+        <form id='sign-in'>
+          <h3 id='sign-in-header'> SIGN IN</h3>
+            <br>
+            <input type='email' name='credentials[email]' placeholder='Enter Email Here' required>
+            <br>
+            <input type='password' name='credentials[password]' placeholder='Enter Password Here' required>
+            <br>
+            <button>Sign In</button>
+        </form>
+
+
+
+        <div id="user-message"></div>
+
+        <div id='sign-up-prompt'>
+        <p> Don't have an account? Create one here...<p>
+        </div>
+
+        <div id='create-account'>
+          <button>Create Account</button>
+        </div>
+
+        <form id='sign-up'>
+          <h3 id='sign-up-header'> SIGN UP</h3>
+          <br>
+          <input type='email' name='credentials[email]' placeholder='Enter Email Here' required>
+          <br>
+          <input type='password' name='credentials[password]' placeholder='Enter Password Here' required>
+          <br>
+          <input type='password' name='credentials[password_confirmation]' placeholder='Enter Password Again' required>
+          <br>
+          <div>
+          <button> Sign Up </button> <button id='exit-sign-up' type='button'>Back</button>
+          </div>
+        </form>
+
+
+        <div id="sign-up-error-message"></div>
+        <div id="sign-up-success-message"></div>
+
+
+
+        <div id='animation-growlith'>
+          <img id='growlith' src='public/growlith.gif' alt='growlith'>
+        </div>
+
+
+          <form id='change-password'>
+            <h3 id='change-password-header'> CHANGE PASSWORD </h3>
+            <br>
+            <input type='password' name='passwords[old]' placeholder='Enter Old Password' required>
+            <br>
+            <input type='password' name='passwords[new]' placeholder='Enter New Password' required>
+            <br>
+            <button>Change Password</button><button id='exit-account-settings' type='button'>Back</button>
+            <div id="password-error-message"></div>
+            <div id="password-success-message"></div>
+          </form>
+
+
+      </section>
+
+
+
+      <h1 id='game-board-title'>Poke-Tac-Toe</h1>
+
+
+
+      <div class='options-row-2'>
+      <div id='new-game'>
+        <button>New Game</button>
+      </div>
+      <div id='get-all-games'>
+        <button>Game Record</button>
+      </div>
+
+    </div>
+
+      <div id='exit-game-record'>
+        <button>Back</button>
+      </div>
+
+
+
+      <div id='player-message'>
+        <p></p>
+      </div>
+
+
+      <section class="poke-board">
+
+
+          <div class="row gameBoard">
+              <div data-cell-index='0' class="col-4 box border-top-0 border-left-0 "><img class='img' src='public/pokeball.gif' alt='pokeball'></div>
+              <div data-cell-index='1' class="col-4 box border-top-0"><img class='img' src='public/pokeball.gif' alt='pokeball'></div>
+              <div data-cell-index='2' class="col-4 box border-top-0 border-right-0"><img class='img' src='public/pokeball.gif' alt='pokeball'></div>
+              <div data-cell-index='3' class="col-4 box altcolor border-left-0"><img class='img' src='public/pokeball.gif' alt='pokeball'></div>
+              <div data-cell-index='4' class="col-4 box"><img class='img' src='public/pokeball.gif' alt='pokeball'></div>
+              <div data-cell-index='5' class="col-4 box border-right-0"><img class='img' src='public/pokeball.gif' alt='pokeball'></div>
+              <div data-cell-index='6' class="col-4 box border-bottom-0 border-left-0 "><img class='img' src='public/pokeball.gif' alt='pokeball'></div>
+              <div data-cell-index='7' class="col-4 box border-bottom-0"><img class='img' src='public/pokeball.gif' alt='pokeball'></div>
+              <div data-cell-index='8' class="col-4 box border-bottom-0 border-right-0"><img class='img' src='public/pokeball.gif' alt='pokeball'></div>
+          </div>
+
+      </section>
+
+      <br>
+      <div class='games-display'>
+      </div>
+
+
+
+
+      <audio id='music' preload="auto" loop>
+        <source src='public/pkmusic.ogg' type='audio/ogg'/>
+      </audio>
+
+      <audio id='intro-music'  loop>
+        <source src='public/poke-intro.mp3' type='audio/mp3'/>
+      </audio>
+
+    </body>
+</html>
