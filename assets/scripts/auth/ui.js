@@ -55,6 +55,7 @@ const signInSuccess = function (response) {
   $('#animation-evee').hide()
   $('#sign-up-success-message').html('')
   $('#change-password').trigger('reset')
+  $('#auth-section').hide()
 }
 
 const signInFailure = function (response) {
@@ -146,6 +147,7 @@ const onStartButton = function () {
   $('#start-screen-message').hide()
   $('#intro-music').trigger('play')
   $('#animation-evee').show()
+  $('.start-screen-message').hide()
 }
 
 const onAccountSettings = function () {
@@ -161,6 +163,7 @@ const onAccountSettings = function () {
   $('#exit-game-record').hide()
   $('.games-display').hide()
   $('#animation-growlith').show()
+  $('#auth-section').show()
 }
 
 

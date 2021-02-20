@@ -33,7 +33,7 @@ const onIndexSuccess = function (responseData) {
 
   games.forEach(game => {
     gamesHTML += `
-  <h4>Board: ${game.cells}</h4>
+  <h7>Board: ${game.cells}</h7>
       <p>date: ${game.createdAt}</p>
       <p>ID: ${game._id}</p>
   `
@@ -86,6 +86,7 @@ const onExitAccountSettings = function () {
   $('#animation-growlith').hide()
   $('#user-message').html('')
   $('#change-password').trigger('reset')
+  $('#auth-section').hide()
 }
 
 module.exports = {

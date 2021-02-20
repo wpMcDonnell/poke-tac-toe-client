@@ -16,7 +16,7 @@
 
       <div class='sign-in-title'>
       <p id='sign-in-title'>POKE-TAC-TOE</p>
-    </div>
+      </div>
 
       <div id='animation-evee'>
         <img id='evee' src='public/evee.gif' alt='evee'>
@@ -26,14 +26,28 @@
         <img id='chansey' src='public/chansey.gif' alt='chansey'>
       </div>
 
-      <div id='start-screen-message'>
-        <p> Press the start button to play... </p>
+      <div class='start-screen-message'>
+        <p id='start-screen-message'> Press the start button to play... </p>
       </div>
 
 
       <div id='start-button'>
         <button>START</button>
       </div>
+
+
+      <div class='options-row'>
+        <div id='account-settings'>
+          <button> Account Settings</button>
+        </div>
+
+        <div id='sign-out-button-row'>
+        <div id='sign-out-button'>
+          <button id='sign-out'>Sign Out</button>
+        </div>
+      </div>
+      </div>
+
 
       <section id="auth-section">
 
@@ -52,7 +66,7 @@
         <div id="user-message"></div>
 
         <div id='sign-up-prompt'>
-        Don't have an account? Create one here...
+        <p> Don't have an account? Create one here...<p>
         </div>
 
         <div id='create-account'>
@@ -77,7 +91,7 @@
         <div id="sign-up-error-message"></div>
         <div id="sign-up-success-message"></div>
 
-        <div class='options-row'>
+        <!-- <div class='options-row'>
           <div id='account-settings'>
             <button> Account Settings</button>
           </div>
@@ -87,7 +101,7 @@
             <button id='sign-out'>Sign Out</button>
           </div>
         </div>
-      </div>
+      </div> -->
 
         <div id='animation-growlith'>
           <img id='growlith' src='public/growlith.gif' alt='growlith'>
@@ -113,11 +127,10 @@
 
       <h1 id='game-board-title'>Poke-Tac-Toe</h1>
 
-      <br>
+
       <div id='new-game'>
         <button>New Game</button>
       </div>
-      <br>
       <div id='get-all-games'>
         <button>Game Record</button>
       </div>
@@ -135,26 +148,17 @@
       <section class="poke-board">
 
 
-          <div class="row">
-              <div data-cell-index='0' class="col-sm-4 box border-top-0 border-left-0 "><img class='img' src='public/pokeball.gif' alt='pokeball'></div>
-              <div data-cell-index='1' class="col-sm-4 box border-top-0"><img class='img' src='public/pokeball.gif' alt='pokeball'></div>
-              <div data-cell-index='2' class="col-sm-4 box border-top-0 border-right-0"><img class='img' src='public/pokeball.gif' alt='pokeball'></div>
-
-
-
-
-            <div data-cell-index='3' class="col-sm-4 box altcolor border-left-0"><img class='img' src='public/pokeball.gif' alt='pokeball'></div>
-            <div data-cell-index='4' accesskey=""class="col-sm-4 box"><img class='img' src='public/pokeball.gif' alt='pokeball'></div>
-            <div data-cell-index='5' class="col-sm-4 box border-right-0"><img class='img' src='public/pokeball.gif' alt='pokeball'></div>
-
-
-
-
-
-          <div data-cell-index='6' class="col-sm-4 box border-bottom-0 border-left-0 "><img class='img' src='public/pokeball.gif' alt='pokeball'></div>
-          <div data-cell-index='7' class="col-sm-4 box border-bottom-0"><img class='img' src='public/pokeball.gif' alt='pokeball'></div>
-          <div data-cell-index='8' class="col-sm-4 box border-bottom-0 border-right-0"><img class='img' src='public/pokeball.gif' alt='pokeball'></div>
-        </div>
+          <div class="row gameBoard">
+              <div data-cell-index='0' class="col-4 box border-top-0 border-left-0 "><img class='img' src='public/pokeball.gif' alt='pokeball'></div>
+              <div data-cell-index='1' class="col-4 box border-top-0"><img class='img' src='public/pokeball.gif' alt='pokeball'></div>
+              <div data-cell-index='2' class="col-4 box border-top-0 border-right-0"><img class='img' src='public/pokeball.gif' alt='pokeball'></div>
+              <div data-cell-index='3' class="col-4 box altcolor border-left-0"><img class='img' src='public/pokeball.gif' alt='pokeball'></div>
+              <div data-cell-index='4' class="col-4 box"><img class='img' src='public/pokeball.gif' alt='pokeball'></div>
+              <div data-cell-index='5' class="col-4 box border-right-0"><img class='img' src='public/pokeball.gif' alt='pokeball'></div>
+              <div data-cell-index='6' class="col-4 box border-bottom-0 border-left-0 "><img class='img' src='public/pokeball.gif' alt='pokeball'></div>
+              <div data-cell-index='7' class="col-4 box border-bottom-0"><img class='img' src='public/pokeball.gif' alt='pokeball'></div>
+              <div data-cell-index='8' class="col-4 box border-bottom-0 border-right-0"><img class='img' src='public/pokeball.gif' alt='pokeball'></div>
+          </div>
 
       </section>
 
