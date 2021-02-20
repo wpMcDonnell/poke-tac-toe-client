@@ -59,7 +59,7 @@ body html {
   align-items: center;
   font-family: 'Press Start 2P', cursive;
   margin-bottom: 0.05rem;
-  font-size: 10px;
+  font-size: 9px;
   margin-left: 0.05rem;
   margin-right: 0.05rem;
 }
@@ -70,7 +70,7 @@ body html {
   align-items: center;
   font-family: 'Press Start 2P', cursive;
   margin-bottom: 0.05rem;
-  font-size: 10px;
+  font-size: 9px;
   margin-left: 0.05rem;
   margin-right: 0.05rem;
 }
@@ -168,13 +168,6 @@ body html {
 
 .poke-board {
   height: 100vh;
-  // padding-right: .05rem;
-  // padding-left: .05rem;
-  // max-height: calc(100vh - 10px);
-  // max-width: calc(100vh - 10px);
-  // max-width: 10%;
-  // max-height: 10%;
-  // padding-top: 60px;
 }
 
 img {
@@ -213,13 +206,20 @@ img {
   margin-bottom: 20px;
 }
 
-#exit-account-settings,
 #get-all-games,
 #new-game {
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: 'Press Start 2P', cursive;
+}
+
+#exit-account-settings {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Press Start 2P', cursive;
+  margin-top: 5px;
 }
 
 #exit-game-record {
@@ -230,9 +230,6 @@ img {
   margin-top: 1rem;
 }
 
-#get-all-games {
-  padding-top: 0.75rem;
-}
 
 #exit-game-record {
   padding-top: 0.75rem;
@@ -250,6 +247,8 @@ img {
 .games-display {
   font-family: 'Press Start 2P', cursive;
   margin-left: 1%;
+  font-size: 11px;
+
 }
 
 #change-password {
@@ -257,7 +256,7 @@ img {
   flex-direction: column;
   align-items: center;
   font-family: 'Press Start 2P', cursive;
-  font-size: 15px;
+  font-size: 13px;
 }
 @media (min-width:550px) {
   #animation-evee #evee {
