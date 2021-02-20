@@ -9,8 +9,7 @@ $alt-color: $blue;
 $body-bg-color: $gray-200;
 $font-color: $light;
 
-
-body {
+body html {
   background-color: $body-bg-color;
   width: 100%;
   height: 100%;
@@ -40,19 +39,9 @@ body {
   align-items: center;
 }
 
-
-// #evee {
-//   display: flex;
-//   justify-content: center;
-// //   // align-items: center;
-// //   // max-width: 55%;
-// //   // max-height: 55%;
-// //   padding-bottom: .02rem;
-// }
-
 #chansey {
   margin-top: 1rem;
-  margin-bottom: .3rem;
+  margin-bottom: 0.3rem;
   max-width: 55%;
   max-height: 55%;
 }
@@ -68,19 +57,17 @@ body {
   flex-direction: column;
   align-items: center;
   font-family: 'Press Start 2P', cursive;
-  margin-bottom: .05rem;
+  margin-bottom: 0.05rem;
   font-size: 1vw;
-  margin-left: .05rem;
-  margin-right: .05rem;
-
+  margin-left: 0.05rem;
+  margin-right: 0.05rem;
 }
 
 #sign-out-button {
   display: flex;
   flex-flow: row-reverse;
-  padding-top: .75rem;
+  padding-top: 0.75rem;
 }
-
 
 #start-button {
   font-family: 'Press Start 2P', cursive;
@@ -98,7 +85,6 @@ body {
   margin-top: 60%;
   animation: blinker 2s linear infinite;
   font-size: 16px;
-
 }
 
 #sign-up {
@@ -151,7 +137,6 @@ body {
   padding-top: 3rem;
   text-align: center;
   font-size: 1vw;
-
 }
 
 #change-password-header,
@@ -219,12 +204,13 @@ img {
 }
 
 #get-all-games {
-  padding-top: .75rem;
+  padding-top: 0.75rem;
 }
 
 #exit-game-record {
-  padding-top: .75rem;
+  padding-top: 0.75rem;
 }
+
 #player-message {
   font-family: 'Press Start 2P', cursive;
   text-align: center;
@@ -236,7 +222,6 @@ img {
 
 .games-display {
   font-family: 'Press Start 2P', cursive;
-  font-size: 1px;
   margin-left: 1%;
 }
 
@@ -247,13 +232,44 @@ img {
   font-family: 'Press Start 2P', cursive;
   font-size: 15px;
 }
+@media (min-width:550px) {
+  #animation-evee #evee {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 33%;
+    max-height: 33%;
+  }
+}
 
-// @media (max-width:400px) {
-//   #animation-evee #evee {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     max-width: 55%;
-//     max-height: 55%;
-//   }
-// }
+@media (min-width:550px) {
+  #sign-in-header {
+    font-size: 2vw;
+  }
+}
+
+@media (min-width:500px) {
+  .start-screen-message {
+    font-size: 2vw;
+    margin-top: 35%;
+    justify-content: center;
+  }
+}
+
+@media (min-width:800px) {
+  .start-screen-message {
+    font-size: 2vw;
+    margin-top: 15%;
+    justify-content: center;
+  }
+}
+
+@media (min-width:500px) {
+  .sign-in-title {
+    font-size: 4vw;
+    margin-top: .5rem;
+    margin-bottom: 0rem;
+    align-items: center;
+
+  }
+}

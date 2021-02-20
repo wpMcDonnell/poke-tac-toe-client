@@ -107,6 +107,7 @@ const signOutSuccess = function (response) {
   $('#new-game').data('clicked', 'no')
   $('#animation-evee').show()
   $('#animation-growlith').hide()
+  $('#auth-section').show()
 }
 
 const signOutFailure = function (response) {
