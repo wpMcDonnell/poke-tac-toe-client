@@ -40,10 +40,10 @@ body html {
 }
 
 #chansey {
-  margin-top: 1rem;
+  margin-top: .5rem;
   margin-bottom: 0.3rem;
-  max-width: 55%;
-  max-height: 55%;
+  max-width: 40%;
+  max-height: 40%;
 }
 
 #growlith {
@@ -82,9 +82,9 @@ body html {
   font-style: italic;
   display: flex;
   text-align: center;
-  margin-top: 60%;
+  margin-top: 45%;
   animation: blinker 2s linear infinite;
-  font-size: 16px;
+  font-size: 4vw;
 }
 
 #sign-up {
@@ -92,14 +92,14 @@ body html {
   flex-direction: column;
   align-items: center;
   font-family: 'Press Start 2P', cursive;
-  font-size: 1vw;
+  font-size: 3vw;
 }
 
 #create-account {
   display: flex;
   justify-content: center;
   font-family: 'Press Start 2P', cursive;
-  font-size: 1vw;
+  font-size: 3vw;
   margin-top: 1rem;
 }
 
@@ -126,7 +126,7 @@ body html {
   flex-direction: column;
   align-items: center;
   font-family: 'Press Start 2P', cursive;
-  font-size: 1vw;
+  font-size: 3vw;
 }
 
 #sign-up-prompt {
@@ -134,9 +134,9 @@ body html {
   font-style: italic;
   display: flex;
   justify-content: center;
-  padding-top: 3rem;
+  padding-top: 1rem;
   text-align: center;
-  font-size: 1vw;
+  font-size: 3vw;
 }
 
 #change-password-header,
